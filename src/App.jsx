@@ -10,19 +10,24 @@ function App() {
  
   //const [count, setCount] = useState(0); 
   //const [todoList, setTodoList] = useState([]);
+  //const [name, setName] = useState("김할아부지");
 
-  const [name, setName] = useState("김할아부지");
 
 
-  return (<div>
-   {name}
-   <br/>
-   <button 
-   onClick = {function(){
-   setName("박할아부지");
-  }}
-   >
-    클릭</button>
+  // onChange 속성에는 항상 event가 매개변수로 딸려온다!
+// 우리가 입력하는 값들이 매개변수로 event.target.value에 들어온다!
+//input 태그와 state와 값을 동기화 했다!  
+const [fruit, setFruit]=useState('');
+  return (
+  <div>
+   과일 : <input 
+   value={fruit} 
+   onChange={function(event){
+    //console.log("event", event.target.value);
+   setFruit(event.target.value);
+   }}/>
+   <br/> <br/>
+  
    </div>)
 }
 
