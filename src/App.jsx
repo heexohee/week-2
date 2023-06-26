@@ -19,7 +19,7 @@ function App() {
    <br/>
    <button 
    onClick = {function(){
-   alert("hello");
+   setName("박할아부지");
   }}
    >
     클릭</button>
